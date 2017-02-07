@@ -1,5 +1,6 @@
+var yourClassNum = 4;
+
 function doAddFromPack(a) {
-    Utils.focus('search_subj_class_cde');
     var rowId  = lectPackReqGrid.getSelectedRowId();
     var result = requestData( 	'procLectPackReqForInpt',
                             { 	
@@ -15,4 +16,21 @@ function doAddFromPack(a) {
                             });
 }
 
-iterateRequest = setInterval(doAddFromPack(0), 1000);
+var foo = function(input) {
+    for(i=0;i<yourClassNum;++i) {
+        doAddFromPack(input);
+    }
+}
+
+var game = function() {
+        setTimeout(function() {
+        for(var j=0;j<yourClassNum;++j) {
+            foo(j);
+            console.log("Foo" + j + " is being done!");
+        }
+    }, 10)
+}
+
+for(i=0;i<5;i++) {
+    game();
+}
