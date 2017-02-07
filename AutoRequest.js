@@ -1,5 +1,5 @@
 var yourClassNum = 4;
-
+var sub_cde, sub_class_cde, sub_div_cde;
 function doAddFromPack(a) {
     var rowId  = lectPackReqGrid.getSelectedRowId();
     var result = requestData( 	'procLectPackReqForInpt',
@@ -26,11 +26,12 @@ var game = function() {
         setTimeout(function() {
         for(var j=0;j<yourClassNum;++j) {
             foo(j);
-            console.log("Foo" + j + " is being done!");
+            console.log(lectPackReqGrid.getValue(j, 'subj_cde') + lectPackReqGrid.getValue(j, 'sub_class_cde')
+            + lectPackReqGrid.getValue(j, 'subj_div_cde') + "가 수강신청 되고 있습니다!");
         }
     }, 10)
 }
 
-for(i=0;i<500;i++) {
+for(i=0;i<100;i++) {
     game();
 }
