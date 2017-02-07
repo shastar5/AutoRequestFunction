@@ -1,6 +1,6 @@
 var yourClassNum = 4;
 var sub_cde, sub_class_cde, sub_div_cde;
-var iteration = 2;
+var iteration = 100;
 
 function doAddFromPack(a) {
     var rowId  = lectPackReqGrid.getSelectedRowId();
@@ -16,6 +16,7 @@ function doAddFromPack(a) {
                                 'onlineLectReq.strt_stu_nbr_yr': '',
                                 'onlineLectReq.div': ''
                             });
+        console.log(result);
 }
 
 var foo = function(input) {
