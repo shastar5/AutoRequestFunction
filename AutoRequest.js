@@ -1,6 +1,5 @@
-var yourClassNum = 4;
+var yourClassNum = 4; // 여기에 수강꾸러미에서 신청할 과목의 갯수를 넣으세요. 저는 예시로 4를 넣었습니다.
 var sub_cde, sub_class_cde, sub_div_cde;
-var iteration = 100;
 
 function doAddFromPack(a) {
     var rowId  = lectPackReqGrid.getSelectedRowId();
@@ -35,6 +34,15 @@ var game = function() {
     }, 10)
 }
 
-for(i=0;i<iteration;i++) {
+while(true) {
+    date = new Date();
+    if(date.getMinutes() < 59 && date.getSeconds() < 55) {
+        console.log('아직 시간이 안 됐네요! 5초 전부터 시작합니다.')
+    } else {
+        break;
+    }
+}
+
+while(true) {
     game();
 }
