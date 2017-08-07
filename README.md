@@ -2,7 +2,7 @@
 경북대학교 수강신청 페이지 (sugang.knu.ac.kr)에서 활용할 수 있는 간단한 스크립트입니다.
 
 # 사용 방법
-1. 수강신청 사이트에 로그인
+1. 수강신청 사이트에 로그인 후 코드(https://github.com/shastar5/AutoRequestFunction/blob/master/AutoRequest.js) 
 2. 크롬의 개발자 도구 - 콘솔을 열어 코드를 붙여넣기 후 엔터 치지 말고 대기
 3. 자신의 수강 꾸러미 내에 있으나, 정원이 초과된 과목 갯수를 맨 위에 yourClassNum에 대입
    ex) 3개라면, yourClassNum = 3이 되어야 합니다.
