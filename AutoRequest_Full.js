@@ -3,6 +3,13 @@ var subj_class_cde = Utils.getFieldValue( 'search_subj_class_cde' ).toUpperCase(
 var captcha_cde	   = Utils.getFieldValue('captcha_cde').toLowerCase();
 alert = function() {}
 logout = function() {}
+
+var interval_id = window.setInterval("", 9999); // Get a reference to the last
+                                                // interval +1
+for (var i = 1; i < interval_id; i++) {
+        window.clearInterval(i);
+}
+
 if(subj_class_cde == null || subj_class_cde == '' ||subj_class_cde.length <10){
     
     alert('교과목 번호 10자리를 입력하여 주세요.');
@@ -104,3 +111,4 @@ function RepeatRequest() {
         
 setInterval(RepeatRequest, 5000);
 limit = 9999999;
+
