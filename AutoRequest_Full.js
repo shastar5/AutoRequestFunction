@@ -2,6 +2,7 @@ count = 0;
 var subj_class_cde = Utils.getFieldValue( 'search_subj_class_cde' ).toUpperCase();
 var captcha_cde	   = Utils.getFieldValue('captcha_cde').toLowerCase();
 alert = function() {}
+logout = function() {}
 if(subj_class_cde == null || subj_class_cde == '' ||subj_class_cde.length <10){
     
     alert('교과목 번호 10자리를 입력하여 주세요.');
@@ -13,7 +14,6 @@ if ( captcha_cde == '' || captcha_cde == null ||captcha_cde.length <4){
     alert('자동입력방지문자 4자리를  입력하여 주세요.');
     
 }
-
 function RepeatRequest() {
             count++;
             console.log(count + '번째 시도중..');
